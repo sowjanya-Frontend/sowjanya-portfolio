@@ -50,7 +50,7 @@ function Home() {
 
               <p className="lead">
                 Frontend Developer with 10+ years of experience building scalable,
-                responsive and high-performance web applications across healthcare,
+                responsive and high performance web applications across healthcare,
                 analytics and enterprise platforms.
               </p>
 
