@@ -1,0 +1,212 @@
+/* ---------- Layout ---------- */
+
+#root {
+  max-width: 100%;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  min-height: 80vh;
+  padding: 40px;
+}
+
+/* ---------- Header / Navbar ---------- */
+
+.portfolio-header {
+  background: black;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-link, .nav-link:hover {
+  color: white !important;
+}
+.active-nav {
+  color: white !important;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.portfolio-logo{
+color:white;
+font-weight:600;
+margin:0;
+}
+/* ---------- Footer ---------- */
+
+.portfolio-footer {
+  background: black;
+  border-top: 1px solid #e5e5e5;
+  color: white;
+}
+
+.portfolio-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ---------- Skill Cards ---------- */
+
+.skill-card {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+  padding: 12px;   
+  height: 80px;      
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px); 
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.skill-card p {
+  font-size: 12px;   
+  margin: 0;
+  text-align: center;
+}
+
+.skill-icon svg {
+  width: 28px;      
+  height: 28px;
+}
+
+.back-home-btn{
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background: #0f5641;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.back-home-btn:hover{
+  background: #0c4635;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ---------- Experience Timeline ---------- */
+
+.timeline {
+  border-left: 3px solid #0d6efd;
+  padding-left: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+/* ---------- Timeline Layout ---------- */
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timeline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.timeline-left {
+  flex: 0 0 200px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  padding-top: 8px;
+}
+
+.timeline-right {
+  flex: 1;
+}
+
+/* ---------- Project Cards ---------- */
+
+.project-card {
+  border-left: 5px solid #0f5641;
+  transition: all 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ---------- Contributions ---------- */
+
+.contribution-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f5641;
+  margin-bottom: 6px;
+}
+
+.contribution-list p {
+  margin: 4px 0;
+  line-height: 1.6;
+}
+
+/* ---------- Tech Stack ---------- */
+
+.tech-stack {
+  margin-top: 8px;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: #0f5641;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+/* ---------- Contact Page ---------- */
+
+.contact-card {
+  border-radius: 15px;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
