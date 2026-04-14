@@ -12,7 +12,7 @@ function Contact() {
 
             <div className="mb-3">
               <strong>Name:</strong>
-              <p className="mb-0">Sowjanya Kandra</p>
+              <p className="mb-0">Kandra Sowjanya</p>
             </div>
 
             <div className="mb-3">
@@ -24,19 +24,19 @@ function Contact() {
               <strong>Email:</strong>
               <p className="mb-0">
                 <a href="mailto:kandra.sowjanya@gmail.com">
-                  kandra.sowjanya@gmail.com
+                  sowjanya111223@gmail.com
                 </a>
               </p>
             </div>
 
             <div className="mb-3">
               <strong>Phone:</strong>
-              <p className="mb-0">+44 7514473040</p>
+              <p className="mb-0">+44 7977231333</p>
             </div>
 
             <div className="mb-3">
               <strong>Location:</strong>
-              <p className="mb-0">Coventry, UK</p>
+              <p className="mb-0">United Kingdom</p>
             </div>
 
             <div className="mb-3">

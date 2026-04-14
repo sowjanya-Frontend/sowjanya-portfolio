@@ -5,7 +5,7 @@ const projects = [
   {
     title: "JANUS – Editorial Platform Modernisation",
     company: "Royal Pharmaceutical Society",
-    duration: "10/2022 – Present | London, UK",
+    duration: "Permanent: Oct 2022 - Aug 2025 | Contract : Sep 2025 - Mar 2026 | London, UK",
     description:
       "Large scale modernization initiative transforming legacy editorial systems into a modern, scalable platform.",
     contributions: [
@@ -15,7 +15,7 @@ const projects = [
       "Improving rendering performance",
       "Collaborating closely in Agile sprints"
     ],
-    tech: ["React", "TypeScript", "Meterial UI" ,"REST API", "Python", "Storybook", "AWS"]
+    tech: ["React", "TypeScript", "Meterial UI", "REST API", "Python", "Storybook", "AWS"]
   },
   {
     title: "Drug Compatibility Checker",
@@ -81,7 +81,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="container">
-    {/* Floating Back to Home Button */}
+      {/* Floating Back to Home Button */}
       <div className="mb-4">
         <Link to="/" className="btn btn-dark back-home-btn">
           &larr; Back to Home
@@ -104,7 +104,7 @@ export default function Projects() {
                 title={proj.title}
                 description={proj.description}
                 contributions={proj.contributions}
-                techstack = {proj.tech}
+                techstack={proj.tech}
               />
             </div>
 

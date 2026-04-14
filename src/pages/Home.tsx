@@ -38,10 +38,10 @@ function Home() {
 
             {/* LEFT SIDE */}
 
-          <div className="col-lg-7 col-md-7 col-sm-12 pe-lg-4 pe-md-3">
+            <div className="col-lg-7 col-md-7 col-sm-12 pe-lg-4 pe-md-3">
 
               <h1 className="display-6 fw-bold">
-                Hi, I'm Sowjanya Kandra
+                Hi, I'm Kandra Sowjanya
               </h1>
 
               <h3 className="text-muted mb-3">
@@ -61,7 +61,7 @@ function Home() {
                 </Link>
 
                 <a
-                  href="/Sowjanya_Kandra_Resume.pdf"
+                  href="/Kandra_Sowjanya_Resume.pdf"
                   download
                   className="btn btn-outline-dark me-3"
                 >
@@ -94,7 +94,7 @@ function Home() {
 
             {/* RIGHT SIDE (PHOTO) */}
 
-           <div className="col-md-5 d-flex justify-content-center justify-content-md-end">
+            <div className="col-md-5 d-flex justify-content-center justify-content-md-end">
 
               <img
                 src={profilePic}
@@ -139,41 +139,48 @@ function Home() {
 
       {/* EXPERIENCE SECTION */}
 
-        <section className="container py-3">
+      <section className="container py-3">
 
         <h2 className="text-center mb-5">
-            Professional Experience
+          Professional Experience
         </h2>
 
         <div className="timeline">
 
-        <div className="timeline-item">
-        <h5>Royal Pharmaceutical Society</h5>
-        <p className="text-muted mb-1">Frontend Developer</p>
-        <small>Oct 2022 — Present | London, UK</small>
+          <div className="timeline-item">
+            <h5>Rolisma Ltd - Contract</h5>
+            <h5>Client - Royal Pharmaceutical Society</h5>
+            <p className="text-muted mb-1">Frontend Developer</p>
+            <small>Sep 2025 — Mar 2026 | London, UK</small>
+          </div>
+
+          <div className="timeline-item">
+            <h5>Royal Pharmaceutical Society - Permanent</h5>
+            <p className="text-muted mb-1">Frontend Developer</p>
+            <small>Oct 2022 — Aug 2025 | London, UK</small>
+          </div>
+
+          <div className="timeline-item">
+            <h5>Splash Business Intelligence Pvt Ltd</h5>
+            <p className="text-muted mb-1">Senior Software Engineer</p>
+            <small>Oct 2016 — Sep 2022 | Hyderabad, India</small>
+          </div>
+
+          <div className="timeline-item">
+            <h5>Napier Healthcare</h5>
+            <p className="text-muted mb-1">Software Engineer</p>
+            <small>Nov 2015 — Oct 2016 | Hyderabad, India</small>
+          </div>
+
+          <div className="timeline-item">
+            <h5>Glasscheese Pvt Ltd</h5>
+            <p className="text-muted mb-1">Junior Frontend Developer</p>
+            <small>Feb 2014 — Nov 2015 | Chennai, India</small>
+          </div>
+
         </div>
 
-        <div className="timeline-item">
-        <h5>Splash Business Intelligence Pvt Ltd</h5>
-        <p className="text-muted mb-1">Senior Software Engineer</p>
-        <small>Oct 2016 — Sep 2022 | Hyderabad, India</small>
-        </div>
-
-        <div className="timeline-item">
-        <h5>Napier Healthcare</h5>
-        <p className="text-muted mb-1">Software Engineer</p>
-        <small>Nov 2015 — Oct 2016 | Hyderabad, India</small>
-        </div>
-
-        <div className="timeline-item">
-        <h5>Glasscheese Pvt Ltd</h5>
-        <p className="text-muted mb-1">Junior Frontend Developer</p>
-        <small>Feb 2014 — Nov 2015 | Chennai, India</small>
-        </div>
-
-        </div>
-
-        </section>
+      </section>
     </>
   );
 }
