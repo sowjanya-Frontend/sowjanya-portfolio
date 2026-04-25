@@ -43,7 +43,7 @@ function Contact() {
               <strong>LinkedIn:</strong>
               <p className="mb-0">
                 <a
-                  href="https://www.linkedin.com/in/sowjanya-kandra-3aab3490"
+                  href="https://www.linkedin.com/in/kandra-sowjanya-3aab3490/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

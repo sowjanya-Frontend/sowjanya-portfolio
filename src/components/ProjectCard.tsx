@@ -13,7 +13,7 @@ export function ProjectCard({ title, description, contributions, techstack }: Pr
 
         <h5 className="card-title fw-bold">{title}</h5>
 
-        <p className="text-muted">{description}</p>
+        <p>{description}</p>
 
         <h6 className="contribution-title mt-3">Key Contributions</h6>
 
@@ -24,9 +24,9 @@ export function ProjectCard({ title, description, contributions, techstack }: Pr
         </div>
 
         <div className="tech-stack mt-4">
-            {techstack.map((t, i) => (
-                <span key={i} className="tech-badge">{t}</span>
-            ))}
+          {techstack.map((t, i) => (
+            <span key={i} className="tech-badge">{t}</span>
+          ))}
         </div>
 
       </div>

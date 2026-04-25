@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SkillCard } from "../components/SkillCard";
 import profilePic from "../../src/assets/images/profile.jpeg";
+import { motion, type Variants } from "framer-motion";
 import {
   SiReact,
   SiTypescript,
@@ -15,6 +16,15 @@ import {
 
 function Home() {
 
+  const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
   const skills = [
     { skillName: "React", icon: <SiReact color="#61dafb" size={40} /> },
     { skillName: "TypeScript", icon: <SiTypescript color="#3178c6" size={40} /> },
@@ -28,42 +38,63 @@ function Home() {
   ];
 
   return (
-    <>
+    <main>
+
       {/* HERO SECTION */}
-
-      <section className="container-fluid py-3 bg-light">
+      <motion.section
+        className="container-fluid"
+        aria-labelledby="intro-heading"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="container">
-
           <div className="row align-items-center">
 
-            {/* LEFT SIDE */}
+            {/* LEFT CONTENT */}
+            <div className="col-lg-8 col-md-8 col-sm-12">
 
-            <div className="col-lg-7 col-md-7 col-sm-12 pe-lg-4 pe-md-3">
+              <header>
+                <h1 id="intro-heading" className="fw-bold">
+                  Frontend Engineer
+                </h1>
 
-              <h1 className="display-6 fw-bold">
-                Hi, I'm Kandra Sowjanya
-              </h1>
+                <p className="fs-5 mb-3">
+                  Hello, I am Sowjanya
+                </p>
+              </header>
 
-              <h3 className="text-muted mb-3">
-                Frontend Developer
-              </h3>
+              <div className="space-y-3">
+                <p>
+                  Frontend Engineer with 10+ years of experience building scalable applications using React and TypeScript.
+                </p>
 
-              <p className="lead">
-                Frontend Developer with 10+ years of experience building scalable,
-                responsive and high performance web applications across healthcare,
-                analytics and enterprise platforms.
-              </p>
+                <p>
+                  Specialised in modern frontend architecture, legacy system modernisation, and reusable component libraries.
+                </p>
 
-              <div className="mt-4">
+                <p>
+                  Experience across healthcare, analytics, and enterprise platforms, focused on performance and maintainability.
+                </p>
 
-                <Link to="/projects" className="btn btn-dark me-3">
-                  View My Professional Career
+                <p>
+                  Passionate about clean UI, developer experience, and continuous improvement.
+                </p>
+
+                <p>
+                  Outside work: exploring tech, learning, and family time.
+                </p>
+              </div>
+              <nav className="mt-4" aria-label="Primary actions">
+
+                <Link to="/projects" className="btn btn-outline-light me-3">
+                  View Professional Experience
                 </Link>
 
                 <a
                   href="/Kandra_Sowjanya_Resume.pdf"
                   download
-                  className="btn btn-outline-dark me-3"
+                  className="btn btn-outline-light me-3"
                 >
                   Download Resume
                 </a>
@@ -71,117 +102,130 @@ function Home() {
                 <a
                   href="https://github.com/sowjanya-Frontend"
                   target="_blank"
-                  className="btn btn-outline-secondary me-2"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-light me-2"
                 >
                   GitHub
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/sowjanya-kandra-3aab3490"
+                  href="https://www.linkedin.com/in/kandra-sowjanya-3aab3490/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-outline-primary"
                 >
                   LinkedIn
                 </a>
 
-              </div>
+              </nav>
 
-
-              <p className="mt-5">
+              <p className="mt-4">
                 Work Authorization: Eligible to work in the UK. No visa sponsorship required.
               </p>
+
             </div>
 
-            {/* RIGHT SIDE (PHOTO) */}
+            {/* RIGHT IMAGE */}
+            <aside className="col-md-4 d-flex justify-content-center">
 
-            <div className="col-md-5 d-flex justify-content-center justify-content-md-end">
-
-              <img
+              <motion.img
                 src={profilePic}
-                alt="Sowjanya Kandra"
-                className="img-fluid rounded-circle shadow"
-                style={{ width: "220px", maxWidth: "100%" }}
+                alt="Portrait of Sowjanya Kandra"
+                className="img-fluid shadow"
+                style={{ width: "250px", maxWidth: "100%" }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               />
 
-            </div>
+            </aside>
 
           </div>
-
         </div>
-      </section>
+      </motion.section>
 
 
       {/* SKILLS SECTION */}
+      <motion.section
+        className="container py-5"
+        aria-labelledby="skills-heading"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <header className="text-center mb-4">
+          <h2 id="skills-heading">Core Competencies</h2>
+        </header>
 
-      <section className="container py-4">
-
-        <h2 className="mb-4 text-center">
-          Core Competencies
-        </h2>
-
-        <div className="row justify-content-center">
+        <ul className="row justify-content-center list-unstyled">
 
           {skills.map((skill) => (
-            <div
+            <li
               key={skill.skillName}
-              className="col-6  col-sm-4 col-md-3 col-lg-2 mb-3"
+              className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3"
             >
-              <SkillCard
-                skillName={skill.skillName}
-                icon={skill.icon}
-              />
-            </div>
+              <motion.div whileHover={{ y: -5 }}>
+                <SkillCard
+                  skillName={skill.skillName}
+                  icon={skill.icon}
+                />
+              </motion.div>
+            </li>
           ))}
 
-        </div>
-
-      </section>
+        </ul>
+      </motion.section>
 
       {/* EXPERIENCE SECTION */}
+      <motion.section
+        className="container py-5"
+        aria-labelledby="experience-heading"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <header className="text-center mb-5">
+          <h2 id="experience-heading">Professional Experience</h2>
+        </header>
 
-      <section className="container py-3">
+        <ol className="timeline list-unstyled">
 
-        <h2 className="text-center mb-5">
-          Professional Experience
-        </h2>
-
-        <div className="timeline">
-
-          <div className="timeline-item">
-            <h5>Rolisma Ltd - Contract</h5>
-            <h5>Client - Royal Pharmaceutical Society</h5>
+          <li className="timeline-item">
+            <h3 className="h5">Rolisma Ltd (Contract)</h3>
+            <p className="mb-1">Client: Royal Pharmaceutical Society</p>
             <p className="text-muted mb-1">Frontend Developer</p>
-            <small>Sep 2025 — Mar 2026 | London, UK</small>
-          </div>
+            <time>Sep 2025 — Mar 2026 | London, UK</time>
+          </li>
 
-          <div className="timeline-item">
-            <h5>Royal Pharmaceutical Society - Permanent</h5>
+          <li className="timeline-item">
+            <h3 className="h5">Royal Pharmaceutical Society</h3>
             <p className="text-muted mb-1">Frontend Developer</p>
-            <small>Oct 2022 — Aug 2025 | London, UK</small>
-          </div>
+            <time>Oct 2022 — Aug 2025 | London, UK</time>
+          </li>
 
-          <div className="timeline-item">
-            <h5>Splash Business Intelligence Pvt Ltd</h5>
+          <li className="timeline-item">
+            <h3 className="h5">Splash Business Intelligence Pvt Ltd</h3>
             <p className="text-muted mb-1">Senior Software Engineer</p>
-            <small>Oct 2016 — Sep 2022 | Hyderabad, India</small>
-          </div>
+            <time>Oct 2016 — Sep 2022 | Hyderabad, India</time>
+          </li>
 
-          <div className="timeline-item">
-            <h5>Napier Healthcare</h5>
+          <li className="timeline-item">
+            <h3 className="h5">Napier Healthcare</h3>
             <p className="text-muted mb-1">Software Engineer</p>
-            <small>Nov 2015 — Oct 2016 | Hyderabad, India</small>
-          </div>
+            <time>Nov 2015 — Oct 2016 | Hyderabad, India</time>
+          </li>
 
-          <div className="timeline-item">
-            <h5>Glasscheese Pvt Ltd</h5>
+          <li className="timeline-item">
+            <h3 className="h5">Glasscheese Pvt Ltd</h3>
             <p className="text-muted mb-1">Junior Frontend Developer</p>
-            <small>Feb 2014 — Nov 2015 | Chennai, India</small>
-          </div>
+            <time>Feb 2014 — Nov 2015 | Chennai, India</time>
+          </li>
 
-        </div>
+        </ol>
+      </motion.section>
 
-      </section>
-    </>
+    </main>
   );
 }
 

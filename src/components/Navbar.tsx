@@ -4,13 +4,13 @@ export function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg portfolio-header px-4">
 
-      <h4 className="me-auto portfolio-logo">Sowjanya Kandra</h4>
+      <h4 className="me-auto portfolio-logo">Frontend Engineer | Sowjanya Kandra</h4>
 
       <ul className="navbar-nav">
 
         <li className="nav-item">
-          <NavLink  
-            to="/" 
+          <NavLink
+            to="/"
             className={({ isActive }) =>
               isActive ? "nav-link active-nav" : "nav-link"
             }
@@ -20,8 +20,8 @@ export function Navbar() {
         </li>
 
         <li className="nav-item">
-          <NavLink 
-            to="/projects" 
+          <NavLink
+            to="/projects"
             className={({ isActive }) =>
               isActive ? "nav-link active-nav" : "nav-link"
             }
@@ -31,8 +31,8 @@ export function Navbar() {
         </li>
 
         <li className="nav-item">
-          <NavLink 
-            to="/contact" 
+          <NavLink
+            to="/contact"
             className={({ isActive }) =>
               isActive ? "nav-link active-nav" : "nav-link"
             }

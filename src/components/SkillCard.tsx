@@ -7,9 +7,21 @@ type SkillCardProps = {
 
 export function SkillCard({ skillName, icon }: SkillCardProps) {
   return (
-    <div className="card skill-card text-center p-3 m-2 h-100">
-      <div className="skill-icon mb-2">{icon}</div>
-      <h5 className="card-title">{skillName}</h5>
-    </div>
+    <article className="card skill-card text-center p-3 h-100">
+
+      {/* ICON */}
+      <div
+        className="skill-icon mb-2"
+        aria-hidden="true"
+      >
+        {icon}
+      </div>
+
+      {/* TEXT */}
+      <p className="card-title mb-0 fw-medium">
+        {skillName}
+      </p>
+
+    </article>
   );
 }
