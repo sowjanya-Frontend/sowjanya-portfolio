@@ -51,6 +51,20 @@ function Home() {
         <div className="container">
           <div className="row align-items-center">
 
+            {/* RIGHT IMAGE */}
+            <aside className="col-md-4 d-flex">
+
+              <motion.img
+                src={profilePic}
+                alt="Portrait of Sowjanya Kandra"
+                className="img-fluid shadow"
+                style={{ width: "250px", maxWidth: "100%" }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              />
+
+            </aside>
+
             {/* LEFT CONTENT */}
             <div className="col-lg-8 col-md-8 col-sm-12">
 
@@ -125,19 +139,6 @@ function Home() {
 
             </div>
 
-            {/* RIGHT IMAGE */}
-            <aside className="col-md-4 d-flex justify-content-center">
-
-              <motion.img
-                src={profilePic}
-                alt="Portrait of Sowjanya Kandra"
-                className="img-fluid shadow"
-                style={{ width: "250px", maxWidth: "100%" }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-
-            </aside>
 
           </div>
         </div>
@@ -157,22 +158,15 @@ function Home() {
           <h2 id="skills-heading">Core Competencies</h2>
         </header>
 
-        <ul className="row justify-content-center list-unstyled">
-
+        <ul className="skills-list">
           {skills.map((skill) => (
-            <li
-              key={skill.skillName}
-              className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3"
-            >
-              <motion.div whileHover={{ y: -5 }}>
-                <SkillCard
-                  skillName={skill.skillName}
-                  icon={skill.icon}
-                />
-              </motion.div>
+            <li key={skill.skillName}>
+              <SkillCard
+                skillName={skill.skillName}
+                icon={skill.icon}
+              />
             </li>
           ))}
-
         </ul>
       </motion.section>
 

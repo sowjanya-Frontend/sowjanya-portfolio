@@ -147,28 +147,48 @@ nav[aria-label="Primary actions"] {
 }
 
 /* =========================
-   SKILL CARD
+   SKILLS PILLS
 ========================= */
-.skill-card {
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.skills-list li {
+  display: inline-block;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
   background-color: #0f172a;
   border: 1px solid #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  transition: all 0.25s ease;
-  cursor: default !important;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
-.skill-card:hover {
-  transform: translateY(-4px);
+.skill-pill:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
 }
 
-.skill-icon {
-  font-size: 2rem;
+.skill-pill .skill-icon {
+  display: flex;
+  align-items: center;
 }
 
-/* GRID SPACING */
-ul.row {
-  row-gap: 20px;
+.skill-pill:hover {
+  background-color: #1e293b;
+  border-color: #3b82f6;
 }
 
 /* =========================
