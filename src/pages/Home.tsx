@@ -78,7 +78,7 @@ function Home() {
                 </p>
               </header>
 
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <p>
                   Frontend Engineer with 10+ years of experience building scalable applications using React and TypeScript.
                 </p>
@@ -147,7 +147,7 @@ function Home() {
 
       {/* SKILLS SECTION */}
       <motion.section
-        className="container py-5"
+        className="container py-3"
         aria-labelledby="skills-heading"
         variants={fadeUp}
         initial="hidden"
@@ -172,51 +172,54 @@ function Home() {
 
       {/* EXPERIENCE SECTION */}
       <motion.section
-        className="container py-5"
+        className="container"
         aria-labelledby="experience-heading"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
+
         <header className="text-center mb-5">
-          <h2 id="experience-heading">Professional Experience</h2>
+          <h2 id="experience-heading">
+            Professional Experience
+          </h2>
         </header>
 
-        <ol className="timeline list-unstyled">
+        <div className="experience-row">
 
-          <li className="timeline-item">
-            <h3 className="h5">Rolisma Ltd (Contract)</h3>
-            <p className="mb-1">Client: Royal Pharmaceutical Society</p>
-            <p className="text-muted mb-1">Frontend Developer</p>
-            <time>Sep 2025 — Mar 2026 | London, UK</time>
-          </li>
+          <article className="experience-mini-card">
+            <h3>Rolisma Ltd</h3>
+            <p>Frontend Developer</p>
+            <time>Sep 2025 — Mar 2026</time>
+          </article>
 
-          <li className="timeline-item">
-            <h3 className="h5">Royal Pharmaceutical Society</h3>
-            <p className="text-muted mb-1">Frontend Developer</p>
-            <time>Oct 2022 — Aug 2025 | London, UK</time>
-          </li>
+          <article className="experience-mini-card">
+            <h3>Royal Pharmaceutical Society</h3>
+            <p>Frontend Developer</p>
+            <time>Oct 2022 — Aug 2025</time>
+          </article>
 
-          <li className="timeline-item">
-            <h3 className="h5">Splash Business Intelligence Pvt Ltd</h3>
-            <p className="text-muted mb-1">Senior Software Engineer</p>
-            <time>Oct 2016 — Sep 2022 | Hyderabad, India</time>
-          </li>
+          <article className="experience-mini-card">
+            <h3>SplashBI</h3>
+            <p>Senior Software Engineer</p>
+            <time>Oct 2016 — Sep 2022</time>
+          </article>
 
-          <li className="timeline-item">
-            <h3 className="h5">Napier Healthcare</h3>
-            <p className="text-muted mb-1">Software Engineer</p>
-            <time>Nov 2015 — Oct 2016 | Hyderabad, India</time>
-          </li>
+          <article className="experience-mini-card">
+            <h3>Napier Healthcare</h3>
+            <p>Software Engineer</p>
+            <time>Nov 2015 — Oct 2016</time>
+          </article>
 
-          <li className="timeline-item">
-            <h3 className="h5">Glasscheese Pvt Ltd</h3>
-            <p className="text-muted mb-1">Junior Frontend Developer</p>
-            <time>Feb 2014 — Nov 2015 | Chennai, India</time>
-          </li>
+          <article className="experience-mini-card">
+            <h3>Glasscheese</h3>
+            <p>Junior Frontend Developer</p>
+            <time>Feb 2014 — Nov 2015</time>
+          </article>
 
-        </ol>
+        </div>
+
       </motion.section>
 
     </main>

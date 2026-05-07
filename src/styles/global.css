@@ -106,29 +106,52 @@ main {
   transform: translateY(-2px);
 }
 
-/* ---------- Experience Timeline ---------- */
+/* =========================
+   EXPERIENCE SINGLE ROW
+========================= */
 
-.timeline {
-  border-left: 3px solid #0d6efd;
-  padding-left: 20px;
-  max-width: 400px;
-  margin: auto;
+.experience-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
-.timeline-item {
-  margin-bottom: 30px;
-  position: relative;
+.experience-mini-card {
+  background-color: rgba(15, 23, 42, 0.85);
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+
+  transition: all 0.25s ease;
+
+  min-height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 5px;
-  width: 14px;
-  height: 14px;
-  background: #0d6efd;
-  border-radius: 50%;
+.experience-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+}
+
+.experience-mini-card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.experience-mini-card p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #cbd5f5;
+}
+
+.experience-mini-card time {
+  font-size: 0.85rem;
+  color: #94a3b8;
 }
 
 /* ---------- Timeline Layout ---------- */
@@ -146,7 +169,7 @@ main {
 }
 
 .timeline-left {
-  flex: 0 0 200px;
+  flex: 0 0 400px;
   font-size: 14px;
   color: #555;
   text-align: right;
